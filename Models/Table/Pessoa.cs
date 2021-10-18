@@ -16,9 +16,13 @@ namespace eCommerce.Models.Table
         }
 
         public int IdPessoa { get; set; }
-        [Required(ErrorMessage = "Campo obrigatório")]
+        [Required(ErrorMessage = "Campo Nome é obrigatório")]
         public string Nome { get; set; }
+
+        [Required(ErrorMessage = "Campo CPF/CNPJ é obrigatório")]
         public long CpfCnpj { get; set; }
+
+        [EmailAddress]
         public string Email { get; set; }
 
         public virtual Cliente Cliente { get; set; }
