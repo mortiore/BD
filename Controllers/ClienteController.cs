@@ -86,7 +86,7 @@ namespace eCommerce.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdPessoa"] = new SelectList(_context.Pessoas, "IdPessoa", "Nome", cliente.IdPessoa);
+            // ViewData["IdPessoa"] = new SelectList(_context.Pessoas, "IdPessoa", "Nome", cliente.IdPessoa);
             return View(cliente);
         }
 
