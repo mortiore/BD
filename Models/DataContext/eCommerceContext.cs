@@ -2,12 +2,14 @@
 using eCommerce.Models.Table;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using eCommerce.Models.Autenticacao;
+using Microsoft.AspNetCore.Identity;
 
 #nullable disable
 
 namespace eCommerce.Models.DataContext
 {
-    public partial class eCommerceContext : DbContext
+    public partial class eCommerceContext : IdentityDbContext<Usuario, Role, string>
     {
         public eCommerceContext()
         {
